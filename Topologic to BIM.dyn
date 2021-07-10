@@ -1,0 +1,1854 @@
+{
+  "Uuid": "228dfa2d-b7d2-4a44-82a3-2b16b3742e99",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Topologic to Revit 18",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Topologic.Face": {
+        "Key": "Topologic.Face",
+        "Value": "TopologicDynamo.dll"
+      },
+      "TopologyFactory.face": {
+        "Key": "Topologic.Factories.TopologyFactory",
+        "Value": "TopologicDynamo.dll"
+      },
+      "Topologic.Topology": {
+        "Key": "Topologic.Topology",
+        "Value": "TopologicDynamo.dll"
+      },
+      "Topologic.Cluster": {
+        "Key": "Topologic.Cluster",
+        "Value": "TopologicDynamo.dll"
+      },
+      "List": {
+        "Key": "List",
+        "Value": "BuiltIn.ds"
+      },
+      "TopologyFactory.w": {
+        "Key": "Topologic.Factories.TopologyFactory",
+        "Value": "TopologicDynamo.dll"
+      },
+      "Color": {
+        "Key": "DSCore.Color",
+        "Value": "DSCoreNodes.dll"
+      },
+      "GeometryColor": {
+        "Key": "Modifiers.GeometryColor",
+        "Value": "GeometryColor.dll"
+      },
+      "Floor": {
+        "Key": "Revit.Elements.Floor",
+        "Value": "RevitNodes.dll"
+      },
+      "Element": {
+        "Key": "Revit.Elements.Element",
+        "Value": "RevitNodes.dll"
+      },
+      "Geometry": {
+        "Key": "Autodesk.DesignScript.Geometry.Geometry",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Material": {
+        "Key": "Revit.Elements.Material",
+        "Value": "RevitNodes.dll"
+      },
+      "FamilyType": {
+        "Key": "Revit.Elements.FamilyType",
+        "Value": "RevitNodes.dll"
+      },
+      "FamilyInstance": {
+        "Key": "Revit.Elements.FamilyInstance",
+        "Value": "RevitNodes.dll"
+      }
+    }
+  },
+  "Inputs": [
+    {
+      "Id": "ba6f53fd69084ee3ace3dec5654069e4",
+      "Name": "Building Envelope",
+      "Type": "string",
+      "Value": "..\\00_Models\\00_Export\\18.1.sat",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "Id": "d1c14b7e7acf41c3bf27bbea5660eda5",
+      "Name": "Splitting Faces",
+      "Type": "string",
+      "Value": "..\\00_Models\\00_Export\\18.2.sat",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "Id": "272cd86570ab428ab221a6a4b51e1075",
+      "Name": "Apertures",
+      "Type": "string",
+      "Value": "..\\00_Models\\00_Export\\18.3.sat",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "Id": "c2b7dd2f957546e8bec24ea25be1b19e",
+      "Name": "Metric Generic Model File Path",
+      "Type": "string",
+      "Value": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\ProgramData\\Autodesk\\RVT 2022\\Family Templates\\English\\Metric Generic Model.rft",
+      "Description": "Allows you to select a file on the system to get its filename"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Users\\andre\\OneDrive\\Documents\\01_Studies\\01_Architecture\\01_MSc Computational Methods in Architecture\\ART803 - Algorithmic Design Thinking\\03_Assessment\\02_Capstone Project\\00_Models\\00_Export\\18.1.sat",
+      "InputValue": "..\\00_Models\\00_Export\\18.1.sat",
+      "NodeType": "ExtensionNode",
+      "Id": "ba6f53fd69084ee3ace3dec5654069e4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "60ef17aec1c14dedbd2d48f147ad89fc",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Users\\andre\\OneDrive\\Documents\\01_Studies\\01_Architecture\\01_MSc Computational Methods in Architecture\\ART803 - Algorithmic Design Thinking\\03_Assessment\\02_Capstone Project\\00_Models\\00_Export\\18.2.sat",
+      "InputValue": "..\\00_Models\\00_Export\\18.2.sat",
+      "NodeType": "ExtensionNode",
+      "Id": "d1c14b7e7acf41c3bf27bbea5660eda5",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0231e7b842a94d70a48ff7746c06c8d4",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Users\\andre\\OneDrive\\Documents\\01_Studies\\01_Architecture\\01_MSc Computational Methods in Architecture\\ART803 - Algorithmic Design Thinking\\03_Assessment\\02_Capstone Project\\00_Models\\00_Export\\18.3.sat",
+      "InputValue": "..\\00_Models\\00_Export\\18.3.sat",
+      "NodeType": "ExtensionNode",
+      "Id": "272cd86570ab428ab221a6a4b51e1075",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "46ed82d87a384a98a25aed040ed52656",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Load the Python Standard and DesignScript Libraries\r\nimport sys\r\nimport clr\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\nclr.AddReference('RevitServices')\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import *\r\nclr.AddReference ('RevitNodes')\r\nimport Revit\r\nclr.ImportExtensions(Revit.Elements)\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n\r\n\r\n#Insert elevations from the model\r\nelevations = IN[0]\r\nelevations.sort()\r\n\r\n#Get the levels from the model and convert them to Dynamo elements\r\ncollector = FilteredElementCollector(doc)\r\nlevels = collector.OfCategory(BuiltInCategory.OST_Levels).ToElements()\r\nlevels = levels[1:]\r\n\r\nTransactionManager.Instance.EnsureInTransaction(doc)\r\n\r\nfor l in range(len(levels)):\r\n        e = elevations[l]\r\n        e_name = str(e)\r\n        e = UnitUtils.ConvertToInternalUnits(e,UnitTypeId.Meters)\r\n        l = levels[l]\r\n        elevation = l.get_Parameter(BuiltInParameter.LEVEL_ELEV)\r\n        elevation.Set(e)\r\n        #name.Set('Level %s' % e_name)\r\n\r\n\r\nfor e in elevations[len(levels):]:\r\n        e_name = str(e)\r\n        e = UnitUtils.ConvertToInternalUnits(e,UnitTypeId.Meters)\r\n        l = Level.Create(doc,e).ToDSType(False)\r\nTransactionManager.Instance.TransactionTaskDone()\r\n\r\n\r\n#After the levels where created, get the levels from the model and set the parameter\r\ncollector = FilteredElementCollector(doc)\r\nlevels = collector.OfCategory(BuiltInCategory.OST_Levels).ToElements()\r\nlevels = levels[1:]\r\n\r\nTransactionManager.Instance.EnsureInTransaction(doc)\r\n\r\nfor l in range(len(levels)):\r\n        e = elevations[l]\r\n        e_name = str(e)\r\n        l = levels[l]\r\n        name = l.get_Parameter(BuiltInParameter.DATUM_TEXT)\r\n        name.Set('Level %s' % e_name)\r\n        \r\nTransactionManager.Instance.TransactionTaskDone()\r\n\r\nlevels = collector.OfCategory(BuiltInCategory.OST_Levels).ToElements()\r\nlevels = levels[1:]\r\n\r\n\r\n\r\n\r\n\r\nOUT = levels",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "3943f10ccc0e4134809b06bf08b5191c",
+      "Inputs": [
+        {
+          "Id": "1453c16a1a674d8a8eff3ae8860fa580",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dfa08c89e68b412d804d4ed78e9f05f2",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FloorTypes, DSRevitNodesUI",
+      "SelectedIndex": 4,
+      "SelectedString": "Concrete-Domestic 425mm",
+      "NodeType": "ExtensionNode",
+      "Id": "d916e4a8e93545ae843565aadd72be02",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4fcc9ddc8ba7408cacee47c28373ee52",
+          "Name": "Floor Type",
+          "Description": "The selected Floor Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All floor types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "external_cell;\ninterior_faces;\napertures;",
+      "Id": "65799191429f45f382370dd679e3d2bc",
+      "Inputs": [
+        {
+          "Id": "ab93c9fcf1fb4edabe34360f599c08d3",
+          "Name": "external_cell",
+          "Description": "external_cell",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "df96f98ac1c04a27babcbe936d9eed3d",
+          "Name": "interior_faces",
+          "Description": "interior_faces",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5dd8ed14b29e4fa0b2bac40f013b663f",
+          "Name": "apertures",
+          "Description": "apertures",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b04ab4ee831a4a0bbe5f4100153a665e",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ddaf6869181c4cf58e8efebd156353db",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0583b322f6d648c2a48499c78de6a36a",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.WallTypes, DSRevitNodesUI",
+      "SelectedIndex": 20,
+      "SelectedString": "Interior - 138mm Partition (1-hr)",
+      "NodeType": "ExtensionNode",
+      "Id": "7437226407364f59bfef47a3a3a34f0a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "77c4e3e519d5481fa076dc1e44b9ad14",
+          "Name": "Wall Type",
+          "Description": "The selected Wall Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All wall types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.WallTypes, DSRevitNodesUI",
+      "SelectedIndex": 8,
+      "SelectedString": "Exterior - Brick on Mtl. Stud",
+      "NodeType": "ExtensionNode",
+      "Id": "ef7d0c565de845cfa04b0c1cde5fe08d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "755c7c5f4a1e42ed82efa6f743f95607",
+          "Name": "Wall Type",
+          "Description": "The selected Wall Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All wall types available in the document."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "curvedCells = output[2];\nelevations = output[1];\ncellComplex = output[0];\napertures = output[3];\ninsertion_points = output[4];\nnames_masses = output[5];",
+      "Id": "440c4d6f025f4c388c3b00be664ffbf1",
+      "Inputs": [
+        {
+          "Id": "a0fa571eb553481d9afe7728058da8e1",
+          "Name": "output",
+          "Description": "output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d259b2eeda704bb480cccef8e37a2c08",
+          "Name": "",
+          "Description": "curvedCells",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f6b04668634411fb454fe30d19ed331",
+          "Name": "",
+          "Description": "elevations",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "23bd791315984ac6881cec383d1d2d7a",
+          "Name": "",
+          "Description": "cellComplex",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a859ace59f964667add7901a674772e2",
+          "Name": "",
+          "Description": "apertures",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0f3972232cb24fc0b52b52a2353a5fcc",
+          "Name": "",
+          "Description": "insertion_points",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8c8c6a0a0a674362bcb2a430f724cebf",
+          "Name": "",
+          "Description": "names_masses",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 162,
+      "SelectedString": "M_Window-Casement-Double:1400 x 1800mm",
+      "NodeType": "ExtensionNode",
+      "Id": "e61e5a9decbb4ea28951a12981e3665d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ef4eb235b795448c9137656a2988d60e",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.FamilyTypes, DSRevitNodesUI",
+      "SelectedIndex": 123,
+      "SelectedString": "M_Single-Flush:0915 x 2134mm",
+      "NodeType": "ExtensionNode",
+      "Id": "1f9105b57700429fb4d494304bca2375",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e073919793dd454ea75543b2182a121e",
+          "Name": "Family Type",
+          "Description": "The selected Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All family types available in the document."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 316,
+      "SelectedString": "OST_Mass",
+      "NodeType": "ExtensionNode",
+      "Id": "b2a31578962841228774a48b89080332",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "51420bfcfe6145b9ad844f4932db3e7a",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Wall.ByFace@string,Revit.Elements.WallType,Autodesk.DesignScript.Geometry.Surface",
+      "Id": "89a1981eb5654e9f92f6c264fe9679d4",
+      "Inputs": [
+        {
+          "Id": "e993b5eb92464c7a8b9a6e05ba81b5fd",
+          "Name": "locationLine",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d67e9f5ae32c4a85b1b4a67ba181ce2d",
+          "Name": "wallType",
+          "Description": "WallType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6f0a1bfa93dc4538b9a8a2646fc36874",
+          "Name": "surface",
+          "Description": "Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "31d5a10d49f140f5a1f6331368344b9b",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a Wall following the geometry of a surface. Walls by Faces cannot be updated, any geometry change will create a new wall and delete the old one.\n\nWall.ByFace (locationLine: string, wallType: WallType, surface: Surface): Element"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.WallLocation, DSRevitNodesUI",
+      "SelectedIndex": 1,
+      "SelectedString": "CoreExterior",
+      "NodeType": "ExtensionNode",
+      "Id": "f65fc8ef05a54d68a01ee8cf00e54382",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bfb49e63a9b94ced999ccae532245186",
+          "Name": "Wall Location",
+          "Description": "The selected Wall Location",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Wall locations."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "import sys\r\nimport clr\r\nclr.AddReference('ProtoGeometry')\r\nclr.AddReference('TopologicDynamo')\r\nfrom Autodesk.DesignScript.Geometry import *\r\nimport Topologic\r\nimport Topologic.Utilities as TU\r\nfrom itertools import chain\r\n\r\n\r\ndef find_horizontal(face):\r\n        \"\"\" This function searches for horizontal faces, but can have an incline\"\"\"\r\n        normal = TU.FaceUtility.NormalAtParameters(face,0.5,0.5)\r\n        if -0.45<= normal[2] <= 0.45:\r\n                return True\r\ndef round_normal(normal):\r\n    \"\"\"This function rounds the normals to the nearest 0.001\"\"\"\r\n    x = round(normal[0],3)+0.0\r\n    y = round(normal[1],3)+0.0\r\n    z = round(normal[2],3)+0.0\r\n    normal = [x,y,z]\r\n    return normal\r\ndef find_curved_face(face):\r\n        parameters = [[0.25,0.75],[0.5,0.25],[0.5,0.5],[0.5,0.75],[0.75,0.25],[0.75,0.5],[0.75,0.75]]\r\n        normals = []\r\n        normal = str(round_normal(TU.FaceUtility.NormalAtParameters(face,0.25,0.25)))\r\n        normals.append(normal)\r\n        print(normals)\r\n        for p in range(len(parameters)):\r\n                normal = TU.FaceUtility.NormalAtParameters(face, parameters[p][0],parameters[p][1])\r\n                normal = str(round_normal(normal))\r\n                if normal not in normals:\r\n                        return False\r\n        return True\r\n\r\ndef find_walls_floors(faces):\r\n        \"\"\"This function divides the faces between walls and floors\"\"\"\r\n        walls = []\r\n        floors = []\r\n        for face in range(len(faces)):\r\n                if find_horizontal(faces[face]):\r\n                        if find_curved_face(faces[face]):\r\n                            walls.append(faces[face])\r\n                else:\r\n                        floors.append(faces[face])\r\n        return walls,floors\r\n\r\ndef find_height_wall(faces):\r\n    \"\"\"This function searches for the height of the walls\"\"\"\r\n    for face in range(len(faces)):\r\n        area = TU.FaceUtility.Area(faces[face])\r\n        edges = faces[face].Edges\r\n        for edge in edges:\r\n            if abs(edge.StartVertex.Z - edge.EndVertex.Z)<0.01:\r\n                length = TU.VertexUtility.Distance(edge.StartVertex , edge.EndVertex)\r\n        height = round(area/length,3)\r\n        dictionary = {'Height': str(height)}\r\n        faces[face] = faces[face].SetDictionary(dictionary)\r\n    return faces\r\n\r\ndef create_levels_dict(elevations):\r\n    \"\"\"This function creates a dictionary for each level\"\"\"\r\n    levels_dict = dict()\r\n    for e in elevations:\r\n        levels_dict['Level '+ str(e)] = []\r\n    return levels_dict\r\n\r\ndef walls_to_levels(walls,levels_dict):\r\n    \"\"\"This funcation takes faces and organizes them by level\"\"\"\r\n    for wall in range(len(walls)):\r\n        height = walls[wall].Dictionary['Height']\r\n        edges = walls[wall].Edges\r\n        normal = TU.FaceUtility.NormalAtParameters(walls[wall],0.5,0.5)\r\n        normal = round_normal(normal)\r\n        edge_len = len(edges)\r\n        vertices = walls[wall].Vertices\r\n        z_values = [v.Z for v in vertices]\r\n        z = min(z_values)\r\n        if normal[2] == float(0):\r\n            if edge_len >4:\r\n                elevation = round(z,3) + 0.0\r\n                levels_dict['Level ' + str(elevation)].append([e.Geometry for e in edges])\r\n            else:\r\n                for e in range(len(edges)):\r\n                    edge = edges[e]\r\n                    #The conditional checks that only the bottom horizontal edge of the face is added to the dictionary\r\n                    if abs(edge.StartVertex.Z - edge.EndVertex.Z)<0.01 and abs(edge.StartVertex.Z - z)<0.01:\r\n                        elevation = round(edge.StartVertex.Z,3) + 0.0\r\n                        levels_dict['Level ' + str(elevation)].append([edges[e].Geometry,height])\r\n        else:\r\n            elevation = round(z,3) + 0.0\r\n            normal = Point.ByCoordinates(normal[0],normal[1],normal[2]).AsVector()\r\n            levels_dict['Level ' + str(elevation)].append([[e.Geometry for e in edges],normal])         \r\n    return levels_dict\r\n\r\ndef floors_to_dict(levels_dict_floors,floors):\r\n    \"\"\"This funcion separates floor to corresponding level\"\"\"\r\n    for floor in range(len(floors)):\r\n        elevation = TU.FaceUtility.VertexAtParameters(floors[floor],0,0)\r\n        try:\r\n            levels_dict_floors['Level ' + str(round(elevation.Z,3)+0.0)].append(floors[floor])\r\n        except KeyError:\r\n            print('Key Error')\r\n    for key,value in list(levels_dict_floors.items()):\r\n        surfaces = []\r\n        for item in value:\r\n                surface = item.Geometry\r\n                surfaces.append(surface)\r\n        if len(surfaces) > 0:\r\n            surface = PolySurface.ByJoinedSurfaces(surfaces)\r\n            curves = surface.PerimeterCurves()\r\n            levels_dict_floors[key] = curves\r\n    return levels_dict_floors\r\n\r\ncell_complex = IN[0]\r\nelevations  = IN[1]\r\nexternal = cell_complex.ExternalBoundary\r\ninternal = cell_complex.InternalBoundaries\r\nexternal = external.Faces\r\n\r\n#With all of the faces of the interior and exterior boundaries, the faces will be filtered and catalogues by interior and exterior walls and floors    \r\nexternal_walls = find_walls_floors(external)[0]\r\ninternal_walls = find_walls_floors(internal)[0]\r\nfloors = find_walls_floors(internal)[1] + find_walls_floors(external)[1]\r\n\r\n#This will add the height to each curve as a dictionary value.\r\nexternal_walls = find_height_wall(external_walls)\r\ninternal_walls = find_height_wall(internal_walls)\r\n\r\n#Create all of the dictionaries that will host the wall curve and the height. \r\n#There will be two dictionaries: one for interior walls and another for exterior walls\r\nlevels_dict_int= create_levels_dict(elevations)\r\nlevels_dict_ext = create_levels_dict(elevations)\r\nlevels_dict_floors = create_levels_dict(elevations)\r\n\r\n#After creating the empty dictionaries, the walls geometry and dictionaries will be added.\r\nlevels_dict_int = walls_to_levels(internal_walls,levels_dict_int)\r\nlevels_dict_ext = walls_to_levels(external_walls,levels_dict_ext)\r\n\r\n#Add floor geometry to the dictionary\r\nlevels_dict_floors = floors_to_dict(levels_dict_floors,floors)\r\n\r\nOUT = levels_dict_int , levels_dict_ext, levels_dict_floors",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "7f5f199e683746e6be575bc945963d69",
+      "Inputs": [
+        {
+          "Id": "ba2e25c5297a4491a445355af0f06d25",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "22134f090d5843a283a371e73f403266",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b87adafcdc9943158b24240f7f4bfd29",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "internal_walls = output[0];\nexternal_walls = output[1];\nfloors = output[2];",
+      "Id": "94327df26f234ffb81fea2b0f4bbe545",
+      "Inputs": [
+        {
+          "Id": "1fa98f699ac3409b9f8a1ac694318515",
+          "Name": "output",
+          "Description": "output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "be024688ba5c40a98dce746d51320452",
+          "Name": "",
+          "Description": "internal_walls",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "59ca57d8df964f6aaa0eaa457b3aa689",
+          "Name": "",
+          "Description": "external_walls",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5c1c86eb113e4877b6e6d4552b030462",
+          "Name": "",
+          "Description": "floors",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "t1 = List.GetItemAtIndex(t2@L3<1>, 0);\nt3 = List.GetItemAtIndex(t2@L3<1>, 1);\nt4 = List.GetItemAtIndex(t2@L3<1>, 2);\nfloor1 = Floor.ByOutlineTypeAndLevel(t1, t3, t4);",
+      "Id": "f80fc758e0664086a5c3392aa47d8e14",
+      "Inputs": [
+        {
+          "Id": "35c74df7d5e142b58041f23a36ff38e0",
+          "Name": "t2",
+          "Description": "t2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "887bb4ee0e4f4de2af24efe7da8e81f5",
+          "Name": "",
+          "Description": "t1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ab1704fcdcf54f678752fee82571e600",
+          "Name": "",
+          "Description": "t3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d7afafc7380b4e3bb51887485182c086",
+          "Name": "",
+          "Description": "t4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2c985dcf92d1402f9218ab1d6edef0c7",
+          "Name": "",
+          "Description": "floor1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Load the Python Standard and DesignScript Libraries\r\nimport sys\r\nimport clr\r\nclr.AddReference(\"System.Core\")\r\nimport System\r\nclr.ImportExtensions(System.Linq)\r\nfrom System.Collections.Generic import *\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\nclr.AddReference('RevitServices')\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import *\r\nclr.AddReference ('RevitNodes')\r\nimport Revit\r\nclr.ImportExtensions(Revit.Elements)\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\n\r\ndef get_curves(level,levels_dict_floors):\r\n  \"\"\"This function takes a level and the dictionary and returns the curves corresponding to that level\"\"\"\r\n  name = level.Name\r\n  curves = levels_dict_floors[name]\r\n  if len(curves)>0:\r\n    return curves\r\n  else:\r\n    return None\r\n\r\ndef convert_nurbs(curve):\r\n    \"\"\"This function takes a Nurbs Curve and rebuilds it\"\"\"\r\n    points = []\r\n    points.append(curve.StartPoint)\r\n    parameters = [0.25,0.5,0.75]\r\n    for p in parameters:\r\n        point= curve.PointAtParameter(p)\r\n        points.append(point)\r\n    points.append(curve.EndPoint)\r\n    curve = NurbsCurve.ByPoints(points)\r\n    return curve\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\nlevels_dict_floors = IN[0]\r\nlevels = UnwrapElement(IN[1])\r\nfloor_type = UnwrapElement(IN[2])\r\noutput = []\r\n\r\n\r\nfor level in levels:\r\n        curves = get_curves(level,levels_dict_floors)\r\n        if curves!=None:\r\n            #By joining and retrieving the curves, the new list of curves is ordered to create the floors\"\"\"\r\n            polyline = PolyCurve.ByJoinedCurves(curves)\r\n            curves = polyline.Curves()\r\n            for curve in range(len(curves)):\r\n                if isinstance(curves[curve],NurbsCurve):\r\n                    curves[curve] = convert_nurbs(curves[curve])  \r\n            if curves != None:\r\n                output.append([curves,floor_type,level])\r\nOUT = output",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "0341600e9ec54f73a26acd48fa3666dc",
+      "Inputs": [
+        {
+          "Id": "2f0b1ef265754555a50ed5ecb7015c15",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7cb75bd1f753414aa142fbd8404b2c60",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "65631f7453154b3fa808855392d31f19",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9e3cdde372fc46058be5f0fa5fd2ad8c",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Load the Python Standard and DesignScript Libraries\r\nimport sys\r\nimport clr\r\nclr.AddReference(\"System.Core\")\r\nimport System\r\nclr.ImportExtensions(System.Linq)\r\nfrom System.Collections.Generic import Dictionary,List\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\nclr.AddReference('RevitServices')\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import *\r\nclr.AddReference ('RevitNodes')\r\nimport Revit\r\nclr.ImportExtensions(Revit.Elements)\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\n\r\n\r\ndef create_walls(dictionary,levels,type,wall_type):\r\n  \"\"\"Thie function takes the dictionary of the walls, levels, interior or exterior type, and revit wall type and creates the walls, depending on the type of wall to be created\"\"\"\r\n  walls = []\r\n  for level in levels:\r\n    curves = dictionary[str(level.Name)]\r\n    for curve in curves:\r\n      if len(curve)>2:\r\n          #create wall by profile\r\n          profile = [p.ToRevitType() for p in curve]\r\n          try:\r\n            new_wall = Wall.Create(doc, profile, wall_type.Id, level.Id,False)\r\n            walls.append(new_wall.ToDSType(False))\r\n          except:\r\n            print(\"Wall profile not created\")\r\n      elif isinstance(curve[0],list):\r\n          profile = [p.ToRevitType() for p in curve[0]]\r\n          normal = curve[1].ToRevitType()\r\n          try:\r\n              new_wall = Wall.Create(doc,profile, wall_type.Id,level.Id,False,normal)\r\n              walls.append(new_wall.ToDSType(False))\r\n          except:\r\n            print(\"Slanted wall not created\")\r\n      \r\n      else:\r\n          height = UnitUtils.ConvertToInternalUnits(float(curve[1]),UnitTypeId.Meters)\r\n          if type == 'Internal':\r\n            height += (-floor_thickness.AsDouble())\r\n          try:\r\n            new_wall = Wall.Create(doc,curve[0].ToRevitType(),wall_type.Id,level.Id,height,0,False,False)\r\n            walls.append(new_wall.ToDSType(False))\r\n          except:\r\n            print(\"Flat wall could not be created\")\r\n  return walls\r\n\r\n\r\n\r\nlevels = UnwrapElement(IN[2])\r\nwall_type_internal = UnwrapElement(IN[3])\r\nwall_type_external = UnwrapElement(IN[4])\r\n\r\nwalls_list = [['Internal',IN[0],wall_type_internal],['External',IN[1],wall_type_external]]\r\n\r\nfloor_type = UnwrapElement(IN[5])\r\nfloor_thickness = floor_type.get_Parameter(BuiltInParameter.FLOOR_ATTR_DEFAULT_THICKNESS_PARAM)\r\nwalls = []\r\n\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\nTransactionManager.Instance.EnsureInTransaction(doc)\r\n\r\nfor dictionary in walls_list:\r\n  walls.append(create_walls(dictionary[1],levels,dictionary[0],dictionary[2]))\r\n\r\nTransactionManager.Instance.TransactionTaskDone()\r\n\r\nOUT = walls",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "9de9b3f9e2bb4da4aad45529f0688f9e",
+      "Inputs": [
+        {
+          "Id": "8a066a912c12495d96d71d1845ba2d24",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "34f0c894652b45e395c8a44660c54dc9",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "981fa7b1da4045af9db0a2eb3cce3080",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a436c08416ec40af85faaf1e53dcef49",
+          "Name": "IN[3]",
+          "Description": "Input #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "99fdc537a5a942258ebe7fc16e32b419",
+          "Name": "IN[4]",
+          "Description": "Input #4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "717746dc4268415cb50dbe4cb02d6a1f",
+          "Name": "IN[5]",
+          "Description": "Input #5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "42041a895d8d46baacb046281c31468e",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Load the Python Standard and DesignScript Libraries\r\nimport sys\r\nimport clr\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\nclr.AddReference('RevitServices')\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import *\r\nclr.AddReference ('RevitNodes')\r\nimport Revit\r\nclr.ImportExtensions(Revit.Elements)\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\n\r\n\r\n\r\ndef type_name(apertures):\r\n    \"\"\"This function takes the apertures and organizes the parameters for family creation\"\"\"\r\n    doors = []\r\n    windows = []\r\n    for aperture in apertures:\r\n        dictionary = aperture.Dictionary\r\n        opening = dictionary['Opening']\r\n        type_name = dictionary['Type Name']\r\n        height = dictionary['Height']\r\n        width = dictionary['Width']\r\n        if opening == 'Door':\r\n            type = {'Height': height,'Width': width, 'Type Name': type_name}\r\n            if type not in doors:\r\n                doors.append(type)\r\n        else:\r\n            type = {'Height': height,'Width': width, 'Type Name': type_name}\r\n            if type not in windows:\r\n                windows.append(type)\r\n    return doors,windows\r\n \r\ndef type_mark(openings):\r\n    for number,value in enumerate(openings):\r\n        openings[number]['Type Mark'] = 'Type ' + str(number + 1)\r\n    return openings\r\n    \r\ndef find_names(openings):\r\n    \"\"\"This function retrieves the name of Family type opening\"\"\"\r\n    names = []\r\n    for item in openings:\r\n        names.append(item['Type Name'])\r\n    return names\r\n\r\ndef copy_famtypes(openings,famtype):\r\n    \"\"\"This function copies the family type for opening. This is for the next function to work\"\"\"\r\n    famtypes = []\r\n    for item in range(len(openings)):\r\n        famtypes.append(famtype)\r\n    return famtypes\r\n    \r\ndef create_new_families(doc,famtypes,newnames):\r\n    \"\"\"Code modified from dimven. “Dimven/SpringNodes.” GitHub, 8 Mar. 2020, github.com/dimven/SpringNodes/blob/2826570c2d0d91f4bd2d84fcf73e267e0bba6155/py/ElementType.Duplicate.py. Accessed 26 May 2021.\"\"\"\r\n    elementlist = []\r\n    func_enum = {'Revit.Elements.WallType' : Revit.Elements.WallType.ByName,\r\n                         'Revit.Elements.FloorType' : Revit.Elements.FloorType.ByName,\r\n                         'Revit.Elements.FamilyType' : Revit.Elements.FamilyType.ByName}\r\n    TransactionManager.Instance.EnsureInTransaction(doc)\r\n    for i in range(len(famtypes) ):\r\n            try:\r\n                    elementlist.append(UnwrapElement(famtypes[i]).Duplicate(newnames[i]) )\r\n            except:\r\n                    try:\r\n                            t1 = famtypes[i].GetType().ToString()\r\n                            if t1 in func_enum:\r\n                                    elementlist.append(func_enum[t1](newnames[i]) )\r\n                            else:\r\n                                    elementlist.append(None)\r\n                    except:\r\n                            elementlist.append(None)\r\n\r\n    TransactionManager.Instance.TransactionTaskDone()\r\n    \"\"\"End of code from dimven. “Dimven/SpringNodes.” GitHub, 8 Mar. 2020, github.com/dimven/SpringNodes/blob/2826570c2d0d91f4bd2d84fcf73e267e0bba6155/py/ElementType.Duplicate.py. Accessed 26 May 2021.\"\"\"\r\n    return elementlist\r\n\r\n\r\n#def change_parameters(family,parameters):\r\n#   \"\"\"Code modified from dannysbentley 2021. dannysbentley/pyDynamo. Available at: https://github.com/dannysbentley/pyDynamo/blob/master/ParameterSet.py [Accessed: 27 May 2021].\"\"\"\r\n    \r\n\r\ndef get_types(type , names):\r\n    \"\"\"This function gets the list of family names from the project\"\"\"\r\n    types = FilteredElementCollector(doc).WherePasses(FamilySymbolFilter(type.Family.Id)).ToElements()\r\n    output = []\r\n    for type in types:\r\n        name = type.get_Parameter(BuiltInParameter.SYMBOL_NAME_PARAM).AsString()\r\n        if name in names:\r\n            output.append(type)\r\n    return output\r\n    \r\ndef change_parameters(famtypes, parameters, dictionaries):\r\n    \"\"\"This function gets the parameters and sets the parameters to the family type\"\"\"\r\n    for fam in famtypes:\r\n        name = fam.get_Parameter(BuiltInParameter.SYMBOL_NAME_PARAM).AsString()\r\n        values = []\r\n        for item in dictionaries:\r\n            if item['Type Name'] == name:\r\n                height = item['Height']\r\n                width = item['Width']\r\n                typemark = item['Type Mark']\r\n                values = [height,width,typemark]\r\n        for parameter in range(len(parameters)):\r\n            value = UnitUtils.ConvertToInternalUnits(float(values[parameter]), UnitTypeId.Meters)\r\n            parameter = fam.get_Parameter(parameters[parameter])\r\n            parameter.Set(value)\r\n\r\n\r\nuiapp = DocumentManager.Instance.CurrentUIApplication\r\napp = uiapp.Application\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\napertures = IN[0]\r\ndoor_type = UnwrapElement(IN[1])\r\nwindow_type = UnwrapElement(IN[2])\r\n\r\n#Create dictionary with all the information to create the new families\r\ndoors = type_mark(type_name(apertures)[0])\r\nwindows = type_mark(type_name(apertures)[1])\r\n\r\n#Extract the names of the new families to be created\r\ndoor_names = find_names(doors)\r\nwindow_names = find_names(windows)\r\n\r\n#In order for the 'create_new_families' \r\ndoortypes = copy_famtypes(door_names,door_type)\r\nwindowtypes = copy_famtypes(window_names,window_type)\r\n\r\n\r\n#Create all of the families and the sizes\r\nnew_doors = create_new_families(doc,doortypes,door_names)\r\nnew_windows = create_new_families(doc,windowtypes,window_names)\r\n\r\n#After creating get all the new family types created. If the families were already created, then the new_families would be empty, so it is better to get the family types again with their names\r\ndoor_types = get_types(door_type,door_names)\r\nwindow_types = get_types(window_type, window_names)\r\n\r\n#Now we need to change the family parameters to match the sizes in the model\r\ndoor_parameters = [BuiltInParameter.DOOR_HEIGHT,BuiltInParameter.DOOR_WIDTH]\r\nwindow_parameters = [BuiltInParameter.WINDOW_HEIGHT,BuiltInParameter.WINDOW_WIDTH]\r\n\r\nchange_parameters(door_types, door_parameters, doors)\r\nchange_parameters(window_types, window_parameters, windows)\r\nOUT = door_types,window_types",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "ce55f3f02b994ae6a4ee063064adc17a",
+      "Inputs": [
+        {
+          "Id": "3e733b095b1b4e9ab4404b7ca5c6b06c",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0f4dfe99c1974b358b80150c106dffc7",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f90522dc5abb4f6ca57583439aa02e1f",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b7765aeb348948be9ce597d5c34dbdb8",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "t1 = List.Flatten(t2, -1);\nt3 = Element.Geometry(t1);\nt4 = List.Flatten(t3, -1);",
+      "Id": "470dad36cd3246ce9a3a372d0acfc3f3",
+      "Inputs": [
+        {
+          "Id": "ba51eb6d39ff410f86e5c87807b4c34c",
+          "Name": "t2",
+          "Description": "t2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "defd8fdbfc3a429f9e6358b62e1051dd",
+          "Name": "",
+          "Description": "t1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "db7a574533334a608ee3520e41c5014e",
+          "Name": "",
+          "Description": "t3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6277fd92e0c840f6b579e37a3cc3ca15",
+          "Name": "",
+          "Description": "t4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\ProgramData\\Autodesk\\RVT 2022\\Family Templates\\English\\Metric Generic Model.rft",
+      "InputValue": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\ProgramData\\Autodesk\\RVT 2022\\Family Templates\\English\\Metric Generic Model.rft",
+      "NodeType": "ExtensionNode",
+      "Id": "c2b7dd2f957546e8bec24ea25be1b19e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ccb062560ccb4ac3a980dd7108dedbc9",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "#This finds all of the levels in the model\r\nimport sys\r\nimport clr\r\nclr.AddReference('ProtoGeometry')\r\nclr.AddReference('TopologicDynamo')\r\nfrom Autodesk.DesignScript.Geometry import *\r\nfrom System.Collections.Generic import Dictionary\r\nfrom System import String\r\nfrom System import Object\r\nimport Topologic\r\nimport Topologic.Utilities as TU\r\nimport itertools\r\nimport math\r\n\r\n\r\n###########################################################################################\r\n\"\"\"This first section creates the functions to be used in the script, divided by use\"\"\"\r\n###########################################################################################\r\n\r\n\r\n#1 : Creation of Cell Complex\r\n###########################################################################################\r\ndef transform_to_topologic(geometry):\r\n  \"\"\"Takes a geometry and converts it into a Topologic element \"\"\"\r\n  geometry = [Topologic.Topology.ByGeometry(g,0.001) for g in geometry]\r\n  return geometry\r\n        \r\ndef create_cell_complex(external,interior):\r\n  \"\"\"Creates a cell complex from external cell, interior faces and apertures\"\"\"\r\n  external = list(itertools.chain(*[topology.Cells for topology in external]))\r\n  interior = list(itertools.chain(*[topology.Faces for topology in interior]))\r\n  cluster = Topologic.Cluster.ByTopologies(interior)\r\n  cell_complex = external[0].Slice(cluster,True)\r\n  return cell_complex\r\n\r\ndef find_elevations (cell_complex):\r\n  \"\"\"Finds and returns all of the elevations in the cell_complex\"\"\"\r\n  elevations = []\r\n  cells = [cell_complex.Cells]\r\n  cells = list(itertools.chain(*cells))\r\n  for cell in cells:\r\n    faces = cell.Faces\r\n    for face in faces:\r\n        elevation1 = round((TU.FaceUtility.VertexAtParameters(face,0,0)).Z,3)+0.0\r\n        elevation2 = round((TU.FaceUtility.VertexAtParameters(face,1,1)).Z,3)+0.0\r\n        if elevation1 not in elevations:\r\n            elevations.append(elevation1)\r\n        if elevation2 not in elevations:\r\n            elevations.append(elevation2)\r\n  elevations.sort()\r\n  return elevations\r\n\r\n\r\ndef find_level(cell):\r\n  \"\"\"Finds the corresponding level to the cell\"\"\"\r\n  elevations = []\r\n  vertices = cell.Vertices\r\n  for vertex in vertices:\r\n    elevation = round(vertex.Z,3)\r\n    if elevation not in elevations:\r\n      elevations.append(elevation)\r\n  output = [min(elevations), max(elevations)]\r\n  return output\r\n\r\ndef assign_dictionaries(cell_complex):\r\n  \"\"\"Assigns dictionaries for Level and Number for each cell of the cell_complex\"\"\"\r\n  dictionaries = []\r\n  internal_vertices = []\r\n  cells = cell_complex.Cells\r\n  for number in range(len(cells)):\r\n    cell = cells[number]\r\n    level = find_level(cell)[0]\r\n    d = dict()\r\n    keys = [\"Level\",\"Number\",\"Name\",\"Finish\"]\r\n    values = [level, number,\"\",\"\"]\r\n    internal_vertex = TU.CellUtility.InternalVertex(cell,0.01)\r\n    for key,value in zip(keys,values):\r\n      d[key] = str(value)\r\n    dictionaries.append(d)\r\n    internal_vertices.append(internal_vertex)\r\n  cell_complex = cell_complex.SetDictionaries(internal_vertices,dictionaries,32)\r\n  return cell_complex\r\n\r\n\r\n#2 : Create and add information to apertures\r\n###########################################################################################\r\ndef find_insertion_point(aperture):\r\n  \"\"\"Finds the insertion point for each type of aperture\"\"\"\r\n  edges = aperture.Edges\r\n  z_values = []\r\n  horizontal = []\r\n  for edge in edges:\r\n    if abs(edge.StartVertex.Z - edge.EndVertex.Z) < 0.001:\r\n      z_values.append(edge.StartVertex.Z)\r\n      horizontal.append(edge)\r\n  min_value = min(z_values)\r\n  min_index = z_values.index(min_value)\r\n  min_edge = horizontal[min_index]\r\n  min_edge = min_edge.Geometry\r\n  point = min_edge.PointAtParameter(0.5)\r\n  point = Topologic.Topology.ByGeometry(point,0.001)\r\n  return point\r\n    \r\ndef find_type(vertices,elevations):\r\n  \"\"\"Checks if the aperture is a window or a door\"\"\"\r\n  for v in vertices:\r\n    if round(v.Z,3) in elevations:\r\n      return True\r\n  return False\r\n        \r\ndef find_dimensions(apertures, elevations):\r\n  \"\"\"Checks the dimensions of the aperture\"\"\"\r\n  for number in range(len(apertures)):\r\n    aperture = apertures[number]\r\n    point = find_insertion_point(aperture)\r\n    edges = aperture.Edges\r\n    vertices = aperture.Vertices\r\n    area = TU.FaceUtility.Area(aperture)\r\n    for e in range(len(edges)):\r\n      edge = edges[e]\r\n      if abs(edge.StartVertex.Z - edge.EndVertex.Z) < 0.001:\r\n        width = round(TU.VertexUtility.Distance(edge.StartVertex,edge.EndVertex),3)\r\n    height = round((area/width),3)\r\n    type = 'Door' if find_type(vertices,elevations) else 'Window'\r\n    dictionary = {'Height' : str(height), 'Width' : str(width) , 'Number' : str(number) , 'Opening' : str(type) , 'Type Name' : str(str(width)+' x '+str(height)+' m')}\r\n    aperture = aperture.AddContent(point,8)\r\n    aperture = aperture.SetDictionary(dictionary)\r\n    apertures[number] = aperture\r\n  return apertures\r\n\r\n#3 : Curved or slanted walls\r\n###########################################################################################\r\ndef find_slanted_faces(normal):\r\n  \"\"\"Checks if a face is slanged\"\"\"\r\n  if 0.001< abs(normal[0]) <0.999 or 0.001< abs(normal[1]) <0.999 or 0.001< abs(normal[2]) <0.999:\r\n    return True\r\n\r\n\r\n# Mass creation for curved cells\r\ndef find_curved_cell(cell):\r\n    \"\"\"This function searched a cell that has a curved face\"\"\"\r\n    parameters = [[0,0.5],[0,1],[0.5,0],[0.5,0.5],[0.5,1],[1,0],[1,0.5],[1,1]]\r\n    faces = cell.Faces\r\n    for face in faces:\r\n        normals = []\r\n        n = TU.FaceUtility.NormalAtParameters(face,0,0)\r\n        n = [round(n[0],3)+0.0,round(n[1],3)+0.0,round(n[2],3)+0.0]\r\n        if find_slanted_faces(n):\r\n          return cell.Geometry\r\n        normals.append(str(n))\r\n        for p in range(len(parameters)):\r\n            normal = TU.FaceUtility.NormalAtParameters(face, parameters[p][0],parameters[p][1])\r\n            normal = [round(normal[0],3)+0.0,round(normal[1],3)+0.0,round(normal[2],3)+0.0]\r\n            if str(normal) not in normals:\r\n              return cell.Geometry\r\n\r\ndef insertion_point(cells):\r\n  \"\"\"This function searches for the insertion point of a mass for the Mass family inside of Revit\"\"\"\r\n  points = []\r\n  for cell in cells:\r\n    if isinstance(cell,Solid):\r\n        bounding_box = cell.BoundingBox\r\n        point = bounding_box.MinPoint\r\n        points.append(point)\r\n  return points\r\n\r\ndef name_of_masses(cells):\r\n    \"\"\"This function creates the names for the masses to be created\"\"\"\r\n    names = []\r\n    for m in range(len(cells)):\r\n        name = 'Mass ' + str(m)\r\n        names.append(name)\r\n    return names\r\n\r\n#Finds faces that represent walls and floors\r\ndef find_horizontal(face):\r\n  \"\"\"Finds horizontal faces, but can contain slope\"\"\"\r\n  normal = TU.FaceUtility.NormalAtParameters(face,0.5,0.5)\r\n  if -0.45<= normal[2] <= 0.45:\r\n    return True\r\n\r\n\r\ndef round_normal(normal):\r\n    \"\"\"This function takes a normal and rounds each direction to the nearest 0.001\"\"\"\r\n    x = round(normal[0],3)+0.0\r\n    y = round(normal[1],3)+0.0\r\n    z = round(normal[2],3)+0.0\r\n    normal = [x,y,z]\r\n    return normal\r\n\r\ndef find_curved_face(face):\r\n        \"\"\"This function searched for a face with different normals\"\"\"\r\n        parameters = [[0.25,0.75],[0.5,0.25],[0.5,0.5],[0.5,0.75],[0.75,0.25],[0.75,0.5],[0.75,0.75]]\r\n        normals = []\r\n        normal = str(round_normal(TU.FaceUtility.NormalAtParameters(face,0.25,0.25)))\r\n        normals.append(normal)\r\n        print(normals)\r\n        for p in range(len(parameters)):\r\n                normal = TU.FaceUtility.NormalAtParameters(face, parameters[p][0],parameters[p][1])\r\n                normal = str(round_normal(normal))\r\n                print(normal)\r\n                if normal not in normals:\r\n                        return False\r\n        return True\r\n\r\n\r\nexternal = Geometry.ImportFromSAT(IN[0])\r\ninterior = Geometry.ImportFromSAT(IN[1])\r\napertures = Geometry.ImportFromSAT(IN[2])\r\n\r\n#Transform the input geometry into Topologic\r\nexternal = transform_to_topologic(external)\r\ninterior = transform_to_topologic(interior)\r\napertures = transform_to_topologic(apertures)\r\n\r\n\r\n#Create cell_complex with the imported geometry and assign dictionaries\r\ncell_complex = create_cell_complex(external,interior)\r\ncell_complex = assign_dictionaries(cell_complex)\r\n\r\n\r\n#Find elevations of the model to create levels\r\nelevations = find_elevations(cell_complex)\r\n\r\n#Apertures\r\napertures = find_dimensions(apertures, elevations)\r\ncell_complex = cell_complex.AddApertures(apertures)\r\n\r\n#find cells that are curved to convert to masses\r\ncurved_cells  = list(filter(None,[find_curved_cell(cell) for cell in cell_complex.Cells]))\r\ninsertion_points = insertion_point(curved_cells)\r\nnames_masses = name_of_masses(curved_cells)\r\n\r\n\r\nOUT = cell_complex , elevations , curved_cells , apertures , insertion_points , names_masses",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "31b6ba55cfa04c5da7d56cb8ec8acdc3",
+      "Inputs": [
+        {
+          "Id": "6c11af94eb384aa6ae11ec46c4bb2cb7",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9e440ce561fb4964aa1afe90165a0166",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c5196b72503943fd947d8944a04fdecb",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9437291181b64c3d90a3c3647aa9d503",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Load the Python Standard and DesignScript Libraries\r\nimport sys\r\nimport clr\r\nclr.AddReference(\"System.Core\")\r\nimport System\r\nclr.ImportExtensions(System.Linq)\r\nfrom System.Collections.Generic import Dictionary,List\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\nclr.AddReference('RevitServices')\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import *\r\nclr.AddReference ('RevitNodes')\r\nimport Revit\r\nclr.ImportExtensions(Revit.Elements)\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\nimport itertools\r\n\r\ndef find_walls(faces):\r\n    new_faces = []\r\n    for face in range(len(faces)):\r\n        normal = faces[face].NormalAtParameter(0.5,0.5)\r\n        z_vector = abs(normal.Z)\r\n        if 0.3 > z_vector:\r\n            new_faces.append(faces[face])\r\n    return new_faces\r\ndef check_wall(face,geometry):\r\n    for geo in range(len(geometry)):\r\n        point = face.PointAtParameter(0.5,0.5)\r\n        distance = geometry[geo].DistanceTo(point)\r\n        if distance < 0.1:\r\n            return True\r\n        \r\n\r\nfaces = UnwrapElement(IN[0])\r\nfaces = list(itertools.chain(*faces))\r\ngeometry = IN[1]\r\n\r\nfaces = find_walls(faces)\r\noutput = []\r\nfor face in faces:\r\n    if check_wall(face, geometry):\r\n        pass\r\n    else:\r\n        output.append(face)\r\n\r\n\r\nOUT = output",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "dbfcfe7864114c27b637505b4bfe7e2a",
+      "Inputs": [
+        {
+          "Id": "db52ef5c795b4074af9f38d3f59c67ec",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2af45cb5254c4cb7b23260c1385386b4",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "42bff110fbda489b826915e0efedf828",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "t1 = t2;\ngeometry1 = Geometry.Scale(t1<1L>, 0.3048000097536);\nmaterial1 = Material.ByName(\"Default\");\nfamilytype1 = FamilyType.ByGeometry(geometry1<1L>, t3<1L>, t4<1L>, t5<1L>, material1<1L>, \"\");\nfamilyinstance1 = FamilyInstance.ByPoint(familytype1, t6);\nsurface1 = Element.Faces(familyinstance1);",
+      "Id": "26ee8495d3634aa392e24e69530b104d",
+      "Inputs": [
+        {
+          "Id": "ef786854de1e4e4281408d384cc9335e",
+          "Name": "t2",
+          "Description": "t2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6e806984338942f3b22a45680f9eb95c",
+          "Name": "t3",
+          "Description": "t3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4976d1f779924ab3a7c8d4baae9bbc63",
+          "Name": "t4",
+          "Description": "t4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ef5ef0bd7b5b42238def666ffef3c6b6",
+          "Name": "t5",
+          "Description": "t5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d112ba4ba83a4b72ae72352f9fb83eee",
+          "Name": "t6",
+          "Description": "t6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bbf9584027ce4034b854bac20e1d04a8",
+          "Name": "",
+          "Description": "t1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3e1faaabe5a84794b441f1c40402ad72",
+          "Name": "",
+          "Description": "geometry1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "035dfd556484431f8ec75018e9bce608",
+          "Name": "",
+          "Description": "material1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "00275af6e26f48d7a8c0994ed7a31aef",
+          "Name": "",
+          "Description": "familytype1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "912d7f863b80486ba712f453c9b9ec88",
+          "Name": "",
+          "Description": "familyinstance1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "59822fb0de1c495080bd1a29e9dcd7af",
+          "Name": "",
+          "Description": "surface1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Load the Python Standard and DesignScript Libraries\r\nimport sys\r\nimport clr\r\nclr.AddReference('ProtoGeometry')\r\nfrom Autodesk.DesignScript.Geometry import *\r\nclr.AddReference('RevitServices')\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import *\r\nclr.AddReference ('RevitNodes')\r\nimport Revit\r\nimport Autodesk\r\nclr.ImportExtensions(Revit.Elements)\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\n\r\ndef find_wall(point,geometry):\r\n    \"\"\"This function receives the insert point of the aperture and searches the closest wall to host it\"\"\"\r\n    for geo in range(len(geometry)):\r\n        distance = geometry[geo].DistanceTo(point)\r\n        if distance < 0.01:\r\n            return geo\r\ndef find_type(type_name, famtypes):\r\n    \"\"\"This function searches for the corresponding family type from the opening type_name\"\"\"\r\n    for fam in famtypes:\r\n        name = fam.get_Parameter(BuiltInParameter.SYMBOL_NAME_PARAM).AsString()\r\n        if name == type_name:\r\n            return fam\r\n\r\nuiapp = DocumentManager.Instance.CurrentUIApplication\r\napp = uiapp.Application\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n# The inputs to this node will be stored as a list in the IN variables.\r\nwalls = UnwrapElement(IN[0])\r\napertures = IN[1]\r\ndictionaries = IN[2]\r\ngeometry = IN[2]\r\ndoor_types = UnwrapElement(IN[3])\r\nwindow_types = UnwrapElement(IN[4])\r\noutput = []\r\n\r\naperture_dict = apertures[0].Dictionary\r\n\r\n\r\nhost = []\r\nftype = []\r\nfpts = []\r\n\r\nfor aperture in apertures:\r\n    point = aperture.Contents[0].Geometry\r\n    geo = find_wall(point,geometry)\r\n    if geo == None:\r\n        geo = 0\r\n    dictionary = aperture.Dictionary\r\n    number = float(dictionary['Number'])\r\n    opening = dictionary['Opening']\r\n    type_name = dictionary['Type Name']\r\n    if opening == 'Door':\r\n        family = find_type(type_name,door_types)\r\n    else:\r\n        family = find_type(type_name,window_types)\r\n    host.append(walls[geo])\r\n    ftype.append(family)\r\n    fpts.append(point)\r\n\r\n\"\"\" The following code was adapted from ---. “Dimven/SpringNodes.” GitHub, 22 July 2020, github.com/dimven/SpringNodes. Accessed 31 May 2021.\"\"\"\r\n\r\n#Copyright(c) 2016, Dimitar Venkov\r\n# @5devene, dimitar.ven@gmail.com\r\n\r\n\r\noutput = []\r\nstrt = Autodesk.Revit.DB.Structure.StructuralType.NonStructural\r\nftp_len = len(ftype) == 1\r\nhst_len = len(host) == 1\r\n\r\nTransactionManager.Instance.EnsureInTransaction(doc)\r\nfor i in range(len(fpts) ):\r\n\tp = fpts[i].ToXyz(True)\r\n\tj = 0 if ftp_len else i\r\n\tk = 0 if hst_len else i\r\n\ttry:\r\n\t\tif not ftype[j].IsActive : ftype[j].Activate()\r\n\t\tlevel = doc.GetElement(host[k].LevelId)\r\n\t\tnf = doc.Create.NewFamilyInstance(p,ftype[j],host[k],level,strt)\r\n\t\toutput.append(nf.ToDSType(False))\r\n\texcept:\r\n\t\toutput.append(None)\r\nTransactionManager.Instance.TransactionTaskDone()\r\n\r\n\"\"\"End of code from Dimitar Venkov\"\"\"\r\n\r\nOUT = output\r\n",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "07c87358a7d941a08a6dd79b02bb6d5b",
+      "Inputs": [
+        {
+          "Id": "cc90a62d88d24378a27de597a5b9d557",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0e1c67d1344045289ca115e5740a3e1f",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2bbc7690a9e249338799e226e6779258",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1afd411b30f54bd0a8f754f9a6403368",
+          "Name": "IN[3]",
+          "Description": "Input #3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3ce36f7afe69410faa087b55d18f3c90",
+          "Name": "IN[4]",
+          "Description": "Input #4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "83a8bb8883ce4f6782540cc2da6de48e",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "door_types =OUT[0];\nwindow_types = OUT[1];",
+      "Id": "95e7e5b1a77f476c878871cd30d17323",
+      "Inputs": [
+        {
+          "Id": "6635662e80334bdea90ea852698b588a",
+          "Name": "OUT",
+          "Description": "OUT",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6de2609d5d2c49029280a991f5caed34",
+          "Name": "",
+          "Description": "door_types",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "67f1c34bd9174826b85d1ba5c8193fda",
+          "Name": "",
+          "Description": "window_types",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "60ef17aec1c14dedbd2d48f147ad89fc",
+      "End": "ab93c9fcf1fb4edabe34360f599c08d3",
+      "Id": "49eced68ce7143fa86a50bccfdba61fd"
+    },
+    {
+      "Start": "0231e7b842a94d70a48ff7746c06c8d4",
+      "End": "df96f98ac1c04a27babcbe936d9eed3d",
+      "Id": "d7176519d9234d138757b5185d8ff7f5"
+    },
+    {
+      "Start": "46ed82d87a384a98a25aed040ed52656",
+      "End": "5dd8ed14b29e4fa0b2bac40f013b663f",
+      "Id": "e9db63f81d87473587f0cd2a86953c58"
+    },
+    {
+      "Start": "dfa08c89e68b412d804d4ed78e9f05f2",
+      "End": "981fa7b1da4045af9db0a2eb3cce3080",
+      "Id": "404ca0f48cb8475fa4b38b6a739bcb44"
+    },
+    {
+      "Start": "dfa08c89e68b412d804d4ed78e9f05f2",
+      "End": "7cb75bd1f753414aa142fbd8404b2c60",
+      "Id": "692dbd8386ff494598ba07484fe4766a"
+    },
+    {
+      "Start": "4fcc9ddc8ba7408cacee47c28373ee52",
+      "End": "65631f7453154b3fa808855392d31f19",
+      "Id": "827b0c1d31f843a994d5a93d7ddfc7f0"
+    },
+    {
+      "Start": "4fcc9ddc8ba7408cacee47c28373ee52",
+      "End": "717746dc4268415cb50dbe4cb02d6a1f",
+      "Id": "77b211acdfb94ffe8147d7b6a6ad2ea5"
+    },
+    {
+      "Start": "b04ab4ee831a4a0bbe5f4100153a665e",
+      "End": "6c11af94eb384aa6ae11ec46c4bb2cb7",
+      "Id": "b2cd2d8e86fc4f4b8a6a643054c672ff"
+    },
+    {
+      "Start": "ddaf6869181c4cf58e8efebd156353db",
+      "End": "9e440ce561fb4964aa1afe90165a0166",
+      "Id": "ce9d56d973094a6e83fe86cb79566511"
+    },
+    {
+      "Start": "0583b322f6d648c2a48499c78de6a36a",
+      "End": "c5196b72503943fd947d8944a04fdecb",
+      "Id": "9ab7ef28ec8c4377abadfea4657b8924"
+    },
+    {
+      "Start": "77c4e3e519d5481fa076dc1e44b9ad14",
+      "End": "a436c08416ec40af85faaf1e53dcef49",
+      "Id": "19cb513f710a4927b074ee1dad100541"
+    },
+    {
+      "Start": "755c7c5f4a1e42ed82efa6f743f95607",
+      "End": "99fdc537a5a942258ebe7fc16e32b419",
+      "Id": "8f7e56e9f274494d989b0d0ecce9826a"
+    },
+    {
+      "Start": "755c7c5f4a1e42ed82efa6f743f95607",
+      "End": "d67e9f5ae32c4a85b1b4a67ba181ce2d",
+      "Id": "08188a198dd54c34903ebc91e5a64c8e"
+    },
+    {
+      "Start": "d259b2eeda704bb480cccef8e37a2c08",
+      "End": "ef786854de1e4e4281408d384cc9335e",
+      "Id": "37029bbf246347e3ad44c46c96a096b8"
+    },
+    {
+      "Start": "4f6b04668634411fb454fe30d19ed331",
+      "End": "22134f090d5843a283a371e73f403266",
+      "Id": "bbfe3e4c2c634cf6a14d80c1630ad73a"
+    },
+    {
+      "Start": "4f6b04668634411fb454fe30d19ed331",
+      "End": "1453c16a1a674d8a8eff3ae8860fa580",
+      "Id": "724898ffd23846de9601cda47dee1cc7"
+    },
+    {
+      "Start": "23bd791315984ac6881cec383d1d2d7a",
+      "End": "ba2e25c5297a4491a445355af0f06d25",
+      "Id": "3a4371dc02394dd0b26939f72622b02f"
+    },
+    {
+      "Start": "a859ace59f964667add7901a674772e2",
+      "End": "3e733b095b1b4e9ab4404b7ca5c6b06c",
+      "Id": "eca7aa8dd2f04e45b403f230452bfa5e"
+    },
+    {
+      "Start": "a859ace59f964667add7901a674772e2",
+      "End": "0e1c67d1344045289ca115e5740a3e1f",
+      "Id": "da057514c40e447eaf086552c1543c0c"
+    },
+    {
+      "Start": "0f3972232cb24fc0b52b52a2353a5fcc",
+      "End": "d112ba4ba83a4b72ae72352f9fb83eee",
+      "Id": "a6d528d8303144c0a80c3c56ea311dec"
+    },
+    {
+      "Start": "8c8c6a0a0a674362bcb2a430f724cebf",
+      "End": "6e806984338942f3b22a45680f9eb95c",
+      "Id": "81115144fac04fa08a53ce07fe604b55"
+    },
+    {
+      "Start": "ef4eb235b795448c9137656a2988d60e",
+      "End": "f90522dc5abb4f6ca57583439aa02e1f",
+      "Id": "2c75fc24c90147beb05f22d61c2cc09d"
+    },
+    {
+      "Start": "e073919793dd454ea75543b2182a121e",
+      "End": "0f4dfe99c1974b358b80150c106dffc7",
+      "Id": "871cafbaf32f4c218ddc25dbf6408e90"
+    },
+    {
+      "Start": "51420bfcfe6145b9ad844f4932db3e7a",
+      "End": "4976d1f779924ab3a7c8d4baae9bbc63",
+      "Id": "fccd3e0f5b6d4e1c8023e0b648d4e80f"
+    },
+    {
+      "Start": "bfb49e63a9b94ced999ccae532245186",
+      "End": "e993b5eb92464c7a8b9a6e05ba81b5fd",
+      "Id": "932bc2a37353474f89ac7262ec61bc92"
+    },
+    {
+      "Start": "b87adafcdc9943158b24240f7f4bfd29",
+      "End": "1fa98f699ac3409b9f8a1ac694318515",
+      "Id": "f587ede8354e46d9a45b264912ad1342"
+    },
+    {
+      "Start": "be024688ba5c40a98dce746d51320452",
+      "End": "8a066a912c12495d96d71d1845ba2d24",
+      "Id": "15041a80721e4d449941a5ef7c257fce"
+    },
+    {
+      "Start": "59ca57d8df964f6aaa0eaa457b3aa689",
+      "End": "34f0c894652b45e395c8a44660c54dc9",
+      "Id": "4365df31288c4e48a0e016d2d56a2fd6"
+    },
+    {
+      "Start": "5c1c86eb113e4877b6e6d4552b030462",
+      "End": "2f0b1ef265754555a50ed5ecb7015c15",
+      "Id": "7938710f72a545379b9da8f2b3427fe8"
+    },
+    {
+      "Start": "9e3cdde372fc46058be5f0fa5fd2ad8c",
+      "End": "35c74df7d5e142b58041f23a36ff38e0",
+      "Id": "cdd3132d654c434d848db1bb365d36b5"
+    },
+    {
+      "Start": "42041a895d8d46baacb046281c31468e",
+      "End": "ba51eb6d39ff410f86e5c87807b4c34c",
+      "Id": "f94b80f2249f42b19b45b72785e199e8"
+    },
+    {
+      "Start": "b7765aeb348948be9ce597d5c34dbdb8",
+      "End": "6635662e80334bdea90ea852698b588a",
+      "Id": "5f82a65bb276453ba60162bf93ff700e"
+    },
+    {
+      "Start": "defd8fdbfc3a429f9e6358b62e1051dd",
+      "End": "cc90a62d88d24378a27de597a5b9d557",
+      "Id": "9dd642c2d2154301b5ee79b378db7659"
+    },
+    {
+      "Start": "6277fd92e0c840f6b579e37a3cc3ca15",
+      "End": "2af45cb5254c4cb7b23260c1385386b4",
+      "Id": "215531562d784793843916c9b33be1f0"
+    },
+    {
+      "Start": "6277fd92e0c840f6b579e37a3cc3ca15",
+      "End": "2bbc7690a9e249338799e226e6779258",
+      "Id": "7a5eb87f7d1c44828a7c018aeed35ed3"
+    },
+    {
+      "Start": "ccb062560ccb4ac3a980dd7108dedbc9",
+      "End": "ef5ef0bd7b5b42238def666ffef3c6b6",
+      "Id": "e517c3f1a2fb4494839ccc19793884c4"
+    },
+    {
+      "Start": "9437291181b64c3d90a3c3647aa9d503",
+      "End": "a0fa571eb553481d9afe7728058da8e1",
+      "Id": "9427b52c8c914ab6991f41cb78ebd7fd"
+    },
+    {
+      "Start": "42bff110fbda489b826915e0efedf828",
+      "End": "6f0a1bfa93dc4538b9a8a2646fc36874",
+      "Id": "03cc53f9228946768b1c93c5fe91cb22"
+    },
+    {
+      "Start": "59822fb0de1c495080bd1a29e9dcd7af",
+      "End": "db52ef5c795b4074af9f38d3f59c67ec",
+      "Id": "9e242972fb16425bbdb1741c889cedcd"
+    },
+    {
+      "Start": "6de2609d5d2c49029280a991f5caed34",
+      "End": "1afd411b30f54bd0a8f754f9a6403368",
+      "Id": "e913b5c85ef341fd9a0fe8bbbffc8d00"
+    },
+    {
+      "Start": "67f1c34bd9174826b85d1ba5c8193fda",
+      "End": "3ce36f7afe69410faa087b55d18f3c90",
+      "Id": "ebff7d8b23354eddbb4a5b27b9009f32"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.1.3976",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 107.54285430908203,
+      "EyeY": 42.987045288085938,
+      "EyeZ": -66.916336059570313,
+      "LookX": -104.16141510009766,
+      "LookY": -43.943016052246094,
+      "LookZ": 50.602310180664063,
+      "UpX": -0.13138982653617859,
+      "UpY": 0.98927420377731323,
+      "UpZ": 0.063824400305747986
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Building Envelope",
+        "Id": "ba6f53fd69084ee3ace3dec5654069e4",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1157.3611466814566,
+        "Y": -475.43762864634459
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Splitting Faces",
+        "Id": "d1c14b7e7acf41c3bf27bbea5660eda5",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1155.0596459050259,
+        "Y": -362.86429531301121
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Apertures",
+        "Id": "272cd86570ab428ab221a6a4b51e1075",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1160.8467987862089,
+        "Y": -250.29096197967795
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Get and Create Levels",
+        "Id": "3943f10ccc0e4134809b06bf08b5191c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 516.352612148165,
+        "Y": -262.001535495644
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Floor Type",
+        "Id": "d916e4a8e93545ae843565aadd72be02",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1182.5364668405389,
+        "Y": -27.162715005218615
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "65799191429f45f382370dd679e3d2bc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -651.35333062247093,
+        "Y": -508.12495200507948
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Interior Wall Type",
+        "Id": "7437226407364f59bfef47a3a3a34f0a",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1176.076294510038,
+        "Y": 95.137688380379473
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Exterior Wall Type",
+        "Id": "ef7d0c565de845cfa04b0c1cde5fe08d",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1175.169484072266,
+        "Y": -138.68342263932425
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "440c4d6f025f4c388c3b00be664ffbf1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 18.820736995381367,
+        "Y": -535.140664895546
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Window Family Type",
+        "Id": "e61e5a9decbb4ea28951a12981e3665d",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1180.1260074371482,
+        "Y": 337.97080940575449
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Door Family Type",
+        "Id": "1f9105b57700429fb4d494304bca2375",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1178.6789764963976,
+        "Y": 221.97080940575461
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Categories",
+        "Id": "b2a31578962841228774a48b89080332",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 814.35530098443337,
+        "Y": -976.82841622571937
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Wall.ByFace",
+        "Id": "89a1981eb5654e9f92f6c264fe9679d4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2462.1696803971008,
+        "Y": -946.68062120125865
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Wall Location",
+        "Id": "f65fc8ef05a54d68a01ee8cf00e54382",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1928.2762923882187,
+        "Y": -1039.6499610725077
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Get Walls and Floors",
+        "Id": "7f5f199e683746e6be575bc945963d69",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 497.18404354058362,
+        "Y": -515.77570940875648
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "94327df26f234ffb81fea2b0f4bbe545",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 836.805339440596,
+        "Y": -502.377592124535
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Create Floors",
+        "Id": "f80fc758e0664086a5c3392aa47d8e14",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1786.9457617069791,
+        "Y": -494.80971591424657
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Get Floor Outlines",
+        "Id": "0341600e9ec54f73a26acd48fa3666dc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1396.2041538992289,
+        "Y": -475.99712678436833
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Create Walls",
+        "Id": "9de9b3f9e2bb4da4aad45529f0688f9e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1448.4009913361792,
+        "Y": -220.09747327419984
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Create Family Types",
+        "Id": "ce55f3f02b994ae6a4ee063064adc17a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1450.3426981792675,
+        "Y": 162.91923442137664
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "470dad36cd3246ce9a3a372d0acfc3f3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1734.9575473756938,
+        "Y": -217.35290397562559
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Metric Generic Model File Path",
+        "Id": "c2b7dd2f957546e8bec24ea25be1b19e",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1185.324481814022,
+        "Y": 443.46966285875266
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Create Cell Complex and extract elevations",
+        "Id": "31b6ba55cfa04c5da7d56cb8ec8acdc3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -342.39390806933704,
+        "Y": -525.22735394900747
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Select Faces",
+        "Id": "dbfcfe7864114c27b637505b4bfe7e2a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2276.3884206732932,
+        "Y": -853.40251068236728
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "26ee8495d3634aa392e24e69530b104d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1254.5880115963018,
+        "Y": -981.25659874025848
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Windows and Doors",
+        "Id": "07c87358a7d941a08a6dd79b02bb6d5b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2219.755355838889,
+        "Y": 79.365275014868814
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "95e7e5b1a77f476c878871cd30d17323",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1734.9092117678936,
+        "Y": 160.59807055209046
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "eceda30492054108a19930f65e0ed45a",
+        "Title": "Inputs",
+        "Nodes": [
+          "ba6f53fd69084ee3ace3dec5654069e4",
+          "d1c14b7e7acf41c3bf27bbea5660eda5",
+          "272cd86570ab428ab221a6a4b51e1075",
+          "d916e4a8e93545ae843565aadd72be02",
+          "7437226407364f59bfef47a3a3a34f0a",
+          "ef7d0c565de845cfa04b0c1cde5fe08d",
+          "e61e5a9decbb4ea28951a12981e3665d",
+          "1f9105b57700429fb4d494304bca2375",
+          "c2b7dd2f957546e8bec24ea25be1b19e"
+        ],
+        "Left": -1195.324481814022,
+        "Top": -528.63762864634464,
+        "Width": 395.5984743768737,
+        "Height": 1065.5072915050973,
+        "FontSize": 36.0,
+        "InitialTop": -475.43762864634459,
+        "InitialHeight": 1063.9072915050972,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "391e090e5f414ff6b9a40df2de97dbd0",
+        "Title": "Cell Complex Creation",
+        "Nodes": [
+          "440c4d6f025f4c388c3b00be664ffbf1",
+          "31b6ba55cfa04c5da7d56cb8ec8acdc3"
+        ],
+        "Left": -352.39390806933704,
+        "Top": -588.34066489554607,
+        "Width": 725.21464506471841,
+        "Height": 225.80000000000007,
+        "FontSize": 36.0,
+        "InitialTop": -535.140664895546,
+        "InitialHeight": 154.91331094653856,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "bcc38b6b049341bfa0afa7d7b1bee8eb",
+        "Title": "Curved Walls Creation",
+        "Nodes": [
+          "b2a31578962841228774a48b89080332",
+          "89a1981eb5654e9f92f6c264fe9679d4",
+          "f65fc8ef05a54d68a01ee8cf00e54382",
+          "dbfcfe7864114c27b637505b4bfe7e2a",
+          "26ee8495d3634aa392e24e69530b104d"
+        ],
+        "Left": 804.35530098443337,
+        "Top": -1092.8499610725078,
+        "Width": 1909.4143794126674,
+        "Height": 369.64745039014053,
+        "FontSize": 36.0,
+        "InitialTop": -1039.6499610725077,
+        "InitialHeight": 331.24745039014044,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e513c170e7794649af3c2c1229579c08",
+        "Title": "Family Creation",
+        "Nodes": [
+          "ce55f3f02b994ae6a4ee063064adc17a",
+          "07c87358a7d941a08a6dd79b02bb6d5b",
+          "95e7e5b1a77f476c878871cd30d17323"
+        ],
+        "Left": 1440.3426981792675,
+        "Top": 26.165275014868811,
+        "Width": 971.81265765962166,
+        "Height": 292.55395940650783,
+        "FontSize": 36.0,
+        "InitialTop": 79.365275014868814,
+        "InitialHeight": 228.55395940650783,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "0450c3f2dbdb40deaae213d99c397e11",
+        "Title": "Wall Creation",
+        "Nodes": [
+          "9de9b3f9e2bb4da4aad45529f0688f9e",
+          "470dad36cd3246ce9a3a372d0acfc3f3"
+        ],
+        "Left": 1438.4009913361792,
+        "Top": -273.29747327419983,
+        "Width": 597.75655603951463,
+        "Height": 285.79999999999995,
+        "FontSize": 36.0,
+        "InitialTop": -220.09747327419984,
+        "InitialHeight": 147.74456929857425,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "28cbe6c8232d45c0aecc13430d510ce0",
+        "Title": "Floor Creation",
+        "Nodes": [
+          "94327df26f234ffb81fea2b0f4bbe545",
+          "f80fc758e0664086a5c3392aa47d8e14",
+          "0341600e9ec54f73a26acd48fa3666dc"
+        ],
+        "Left": 826.805339440596,
+        "Top": -555.577592124535,
+        "Width": 1450.1404222663832,
+        "Height": 235.38046534016672,
+        "FontSize": 36.0,
+        "InitialTop": -502.377592124535,
+        "InitialHeight": 171.38046534016667,
+        "TextblockHeight": 43.2,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -474.60867689938254,
+    "Y": 371.68961975331484,
+    "Zoom": 0.50653479102203414
+  }
+}
